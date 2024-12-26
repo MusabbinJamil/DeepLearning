@@ -1,0 +1,25 @@
+In this assignment, you will build a simple feed-forward neural network, and forward propagate data and backward propagate errors.
+
+
+For this, you may use a small classification problem, say binary classification, on toy data.
+
+Step 1.
+
+Make a 1-layer network, i.e. having just the output layer and layer 0 (inputs). The index of theoutput unit corresponds to the class label, but you may even have a single unit in that output layer. Here you'd just developing the chain rule without really backpropagating.
+
+Step 2.
+
+Add at least 1 hidden layers. Use multiple units in each. Both forward and backward propagation is many-to-many. All units have sigmoid non-linearities. Your outputs are winner-takes-all.
+
+Please refer to the very old src for help here:https://colab.research.google.com/drive/1sZQKiyeD-4ynA4c0S8gnN22dLTnOP1Yp?usp=sharing
+
+This won't open with write access.
+
+Thank you.
+
+
+PS.
+
+This is an individual assignment.
+
+Please submit Colaboratory links, with edit access open to make it easy to run.

@@ -1,0 +1,57 @@
+import torch
+import torch.nn as nn
+import torch.optim as optim
+import torchvision.transforms as transforms
+from torch.utils.data import DataLoader, Dataset
+
+# Define a basic CNN-RNN architecture
+class CRNN(nn.Module):
+    def __init__(self, num_classes):
+        super(CRNN, self).__init__()
+        
+        # CNN layers for feature extraction
+        self.cnn = nn.Sequential(
+            nn.Conv2d(1, 64, kernel_size=3, stride=1, padding=1),
+            nn.ReLU(),
+            nn.MaxPool2d(2, 2),
+            # Add additional CNN layers as needed
+        )
+        
+        # RNN layers for sequence modeling
+        self.rnn = nn.LSTM(256, 128, batch_first=True, bidirectional=True)
+        
+        # Final fully connected layer for classification
+        self.fc = nn.Linear(128 * 2, num_classes)
+
+    def forward(self, x):
+        # Pass through CNN layers
+        x = self.cnn(x)
+        x = x.permute(0, 2, 3, 1)  # Reshape for RNN
+        x = x.view(x.size(0), x.size(1), -1)
+        
+        # Pass through RNN layers
+        x, _ = self.rnn(x)
+        
+        # Final classification
+        x = self.fc(x)
+        return x
+
+
+
+
+
+
+
+
+# Define the optimizer and CTC loss function
+optimizer = optim.Adam(model.parameters(), lr=0.001)
+criterion = nn.CTCLoss()
+
+# Training loop
+for epoch in range(num_epochs):
+    for images, labels in train_loader:
+        optimizer.zero_grad()
+        outputs = model(images)
+        loss = criterion(outputs, labels)  # Assuming labels are in the appropriate format for CTC
+        loss.backward()
+        optimizer.step()

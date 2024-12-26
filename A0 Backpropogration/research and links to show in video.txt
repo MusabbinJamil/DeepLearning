@@ -1,0 +1,18 @@
+Long
+What is backprop eally doing? 
+https://www.youtube.com/watch?v=Ilg3gGewQ5U
+
+Back Prop in NN
+https://www.youtube.com/watch?v=ayOOMlgb320&pp=ygUPYmFja3Byb3BhZ2F0aW9u
+
+Back prop calculus
+https://www.youtube.com/watch?v=tIeHLnjs5U8&pp=ygUPYmFja3Byb3BhZ2F0aW9u
+
+Solved Example Back prop
+https://www.youtube.com/watch?v=tUoUdOdTkRw&pp=ygUPYmFja3Byb3BhZ2F0aW9u
+
+
+Short
+Backprop in NN
+https://youtube.com/shorts/NHKht6p9X1Q?si=OkTFX0uzoQ1GlaTv
+
