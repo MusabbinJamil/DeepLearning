@@ -1,0 +1,7 @@
+https://cs231n.stanford.edu/reports/2022/pdfs/62.pdf
+
+We tried replicating the project as mentioned in the report link above.
+Unfortunately we weren't able to get much reuslts, we tried training a 
+Siamese Neural Network which was a step back from what was demonstrated in the report
+but our accuracies could not reach a usable value in the time that we had. Nonetheless, 
+our attempt is provided in the form of the notebook named "Deep_learning_project_v3.ipynb".
